@@ -1,0 +1,6 @@
+powerUsage <- read.csv("2DayData.csv",sep=" ")
+gap <- as.character(powerUsage$Global_active_power)
+gap_numeric <- as.numeric(gap)
+png(filename = "plot1.png",width = 480, height = 480, units = "px", pointsize = 12)
+hist(gap_numeric ,col="red",main="Global Active Power",xlab="Global Active Power(kilowatts)")
+dev.off()
